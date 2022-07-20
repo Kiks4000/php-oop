@@ -17,57 +17,10 @@ Fatal error: Uncaught Error: Call to undefined method Beverage::getAlcoholPercen
 USE TYPEHINTING EVERYWHERE!
 */
 
-class Beverage
-{
-    public string $color;
-    public float $price;
-    public string $temperature;
+namespace exercice2;
 
-    public function __construct(string $color, float $price, string $temperature)
-    {
-        $this->color = $color;
-        $this->price = $price;
-        $this->temperature = $temperature;
-    }
-
-    public function getInfo():string
-    {
-        return "The color is " . $this->color . " and the price is " . $this->price . " euro. The temperature is " . $this->temperature . ".";
-    }
-
-    public function getTemperature():int
-    {
-        return $this->temperature;
-    }
-
-    public function getColor():string
-    {
-        return $this->color;
-    }
-}
-
-class Beer extends Beverage
-{
-    public string $name;
-    public int $alcoholPercentage;
-
-    public function __construct(string $color, float $price, string $temperature, string $name, int $alcoholPercentage)
-    {
-        parent::__construct($color, $price, $temperature);
-        $this->name = $name;
-        $this->alcoholPercentage = $alcoholPercentage;
-    }
-
-    public function getAlcoholPercentage():int
-    {
-        return $this->alcoholPercentage;
-    }
-
-    public function getTemperature():int
-    {
-        return $this->temperature;
-    }
-}
+require_once "Beverage.php";
+require_once "Beer.php";
 
 $Duvel = new Beer("blond", 3.5, "cold", "Duvel", 8.5);
 

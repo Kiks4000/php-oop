@@ -14,34 +14,7 @@ TODO: Make a getInfo function which returns "This beverage is <temperature> and 
         USE TYPEHINTING EVERYWHERE!
         */
 
-class BeverageOne
-{
-    public $color;
-    public $price;
-    public $temperature;
-
-    public function __construct($color, $price, $temperature = "cold")
-    {
-        $this->color = $color;
-        $this->price = $price;
-        $this->temperature = $temperature;
-    }
-
-    public function getInfo()
-    {
-        return "This beverage is $this->temperature and $this->color.";
-    }
-
-    public function getTemperature()
-    {
-        return $this->temperature;
-    }
-
-    public function getColor()
-    {
-        return $this->color;
-    }
-}
+namespace exercice1;
 
 $cola = new BeverageOne("black", 2);
 echo $cola->getInfo();
